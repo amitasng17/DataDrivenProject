@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Stock Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Modify Stock Test-Sell Stock(failed)">
+    <parameter name="action" value="sellstock"/>
+    <classes>
+      <class name="rediff.testcases.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="selectPortFolio"/>
+          <include name="beforeMethod"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- rediff.testcases.PortfolioManagement -->
+      <class name="rediff.testcases.Session">
+        <methods>
+          <include name="quit"/>
+          <include name="doLogin" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- rediff.testcases.Session -->
+      <class name="rediff.testcases.StockManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="VerifyStockPresent"/>
+          <include name="verifyTransactionHistory"/>
+          <include name="VerifyStockQuantity"/>
+          <include name="beforeMethod"/>
+          <include name="modifyStock"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- rediff.testcases.StockManagement -->
+    </classes>
+  </test> <!-- Modify Stock Test-Sell Stock(failed) -->
+  <test thread-count="5" name="Modify Stock Test-Buy Stock(failed)">
+    <parameter name="action" value="buystock"/>
+    <classes>
+      <class name="rediff.testcases.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="selectPortFolio"/>
+          <include name="beforeMethod"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- rediff.testcases.PortfolioManagement -->
+      <class name="rediff.testcases.StockManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="VerifyStockPresent"/>
+          <include name="verifyTransactionHistory"/>
+          <include name="VerifyStockQuantity"/>
+          <include name="beforeMethod"/>
+          <include name="modifyStock"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- rediff.testcases.StockManagement -->
+    </classes>
+  </test> <!-- Modify Stock Test-Buy Stock(failed) -->
+</suite> <!-- Failed suite [Stock Suite] -->
